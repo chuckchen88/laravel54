@@ -36,24 +36,42 @@ class PostController extends Controller
         ],[
             'title.min' => '文章标题过短',
         ]);
+        $user_id = \Auth::id();
+        $params = array_merge(request(['title','content']),compact('user_id'));
 
-        $post = Post::create(request(['title','content']));
+        $post = Post::create($params);
        // dd($post);
         return redirect("/posts");
 
 
     }
     //编辑文章
-    public function edit(){
-        return view("post/edit");
+    public function edit(Post $post){
+        return view("post/edit",compact('post'));
     }
     //编辑逻辑
-    public function update(){
-        return;
+    public function update(Post $post){
+        //验证
+        $this->validate(request(),[
+            'title' => 'required|string|max:100|min:5',
+            'content' => 'required|string|min:10',
+        ],[
+            'title.min' => '文章标题过短',
+        ]);
+        //授权判断
+        $this->authorize('update',$post);
+        //逻辑
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();
+        //渲染
+        return redirect("/posts/{$post->id}");
     }
     //删除逻辑
-    public function delete(){
-
+    public function delete(Post $post){
+        $this->authorize('delete',$post);
+        $post->delete();
+        return redirect("/posts");
     }
     //图片上传
     public function imageUpload(Request $request)
