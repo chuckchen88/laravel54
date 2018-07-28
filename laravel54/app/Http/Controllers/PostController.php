@@ -111,7 +111,7 @@ class PostController extends Controller
         $post->zan(\Auth::id())->delete();
         return back();
     }
-<<<<<<< HEAD
+
     //文章搜索页
     public function search(Post $post){
         //验证
@@ -125,6 +125,5 @@ class PostController extends Controller
 
         return view("post/search",compact("posts","query"));
     }
-=======
->>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
+
 }

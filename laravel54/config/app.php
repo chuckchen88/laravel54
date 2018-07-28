@@ -177,12 +177,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-<<<<<<< HEAD
+
         Laravel\Scout\ScoutServiceProvider::class,
         ScoutEngines\Elasticsearch\ElasticsearchProvider::class,
 
-=======
->>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
+
     ],
 
     /*

@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Model;
-<<<<<<< HEAD
+
 use Laravel\Scout\Searchable;
 
 class Post extends Model       //默认posts表
@@ -24,16 +24,11 @@ class Post extends Model       //默认posts表
         ];
     }
 
-=======
-
-class Post extends Model       //默认posts表
-{
->>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
     //protected $table = "posts";
 
     //protected $guarded;//不可注入的字段
 
-   // protected $fillable = ['title','content'];//可以注入数据字段
+    // protected $fillable = ['title','content'];//可以注入数据字段
 
     //关联用户  模型关联
     public function user(){
@@ -53,4 +48,6 @@ class Post extends Model       //默认posts表
     public function zans(){
         return $this->hasMany(\App\Zan::class);
     }
+
+
 }
