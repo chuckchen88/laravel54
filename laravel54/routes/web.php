@@ -56,14 +56,20 @@ Route::get('/user/me/setting','\App\Http\Controllers\UserController@setting');
 Route::post('/user/me/setting','\App\Http\Controllers\UserController@settingStore');
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
 //文章列表
 Route::get('/posts','\App\Http\Controllers\PostController@index');
 //创建文章
 Route::get('/posts/create','\App\Http\Controllers\PostController@create');
 Route::post('/posts','\App\Http\Controllers\PostController@store');
+<<<<<<< HEAD
 //搜索结果页
 Route::get('/posts/search','\App\Http\Controllers\PostController@search');
+=======
+>>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
 //文章详情
 Route::get('/posts/{post}','\App\Http\Controllers\PostController@show');
 //编辑文章
@@ -78,4 +84,8 @@ Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@commen
 //文章赞
 Route::get('/posts/{post}/zan','\App\Http\Controllers\PostController@zan');
 //文章取消赞
+<<<<<<< HEAD
 Route::get('/posts/{post}/unzan','\App\Http\Controllers\PostController@unzan');
+=======
+Route::get('/posts/{post}/unzan','\App\Http\Controllers\PostController@unzan');
+>>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016

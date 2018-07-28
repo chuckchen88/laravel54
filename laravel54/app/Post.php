@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Model;
+<<<<<<< HEAD
 use Laravel\Scout\Searchable;
 
 class Post extends Model       //默认posts表
@@ -23,6 +24,11 @@ class Post extends Model       //默认posts表
         ];
     }
 
+=======
+
+class Post extends Model       //默认posts表
+{
+>>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
     //protected $table = "posts";
 
     //protected $guarded;//不可注入的字段

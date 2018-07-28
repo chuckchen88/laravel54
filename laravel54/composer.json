@@ -6,11 +6,16 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+<<<<<<< HEAD
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.4.*",
         "laravel/scout": "^4.0",
         "laravel/tinker": "~1.0",
         "tamayo/laravel-scout-elastic": "^3.0"
+=======
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0"
+>>>>>>> d8b691d2020112d7ddb5b42bf07a1d32b681c016
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
